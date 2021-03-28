@@ -1,0 +1,257 @@
+// only bg in #
+#profits {
+  background-image: url('assets/pattern.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $grey;
+    z-index: -1;
+  }
+}
+
+// content
+
+.profits {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__title {
+    text-align: right;
+  }
+
+  &__cards {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+  }
+
+  &__card {
+    background-color: $white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 390px;
+    position: relative;
+    border-left: 10px solid $grenade;
+    border-bottom: 10px solid $grenade;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background-image: url("/wp-content/themes/zig-template/assets/01.svg");
+      background-size: cover;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      color: $blue;
+    }
+
+    .text {
+      padding-top: 20px;
+      font-size: 18px;
+      color: $blue;
+      padding-bottom: 20px;
+      min-height: 180px;
+    }
+  }
+}
+
+.relations {
+  @include flex(center);
+  width: 100%;
+  position: relative;
+
+  &__image {
+    width: 50%;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding-top: 0;
+    padding-right: $content-padding-desktop;
+    padding-left: 23px;
+
+    .button {
+      width: 240px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 75px;
+  }
+
+  &__text {
+    width: 592px;
+    font-size: 18px;
+    padding-bottom: 30px;
+
+    p {
+      padding: 10px 0;
+    }
+  }
+}
+
+@include respond-to($xxl) {
+  #profits {
+    background-position: -300px 0;
+  }
+  .profits {
+    padding-top: 50px;
+
+    &__cards {
+      //grid-gap: 25px;
+      padding-top: 50px;
+    }
+
+    &__card {
+      padding: 25px;
+    }
+  }
+  .relations {
+    &__content {
+      padding-right: $content-padding-tablet;
+    }
+  }
+}
+
+@include respond-to($xl) {
+  .profits {
+    &__cards {
+      grid-gap: 15px;
+    }
+
+    &__card {
+      padding: 15px;
+      width: 275px;
+      height: 307px;
+
+      .title {
+        font-size: 26px;
+      }
+    }
+  }
+  .relations {
+    &__image {
+      align-self: flex-end;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include respond-to($large) {
+  .profits {
+    &__cards {
+      grid-gap: 10px;
+    }
+
+    &__card {
+      padding: 10px;
+      width: 225px;
+      height: 251px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .text {
+        min-height: 150px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include respond-to($medium) {
+  #profits {
+    background-image: none;
+  }
+  .profits {
+    &__title {
+      padding-left: 30px;
+    }
+
+    &__cards {
+      grid-gap: 10px;
+    }
+
+    &__card {
+      padding: 15px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include respond-to($small) {
+  .profits {
+
+    &__title {
+      text-align: left;
+    }
+
+    &__cards {
+      grid-template-columns:  1fr;
+      grid-gap: 60px;
+      place-items: center;
+    }
+
+    &__card {
+      width: 261px;
+      height: 291px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .text {
+        padding-top: 20px;
+        font-size: 14px;
+        min-height: auto;
+        color: $blue;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .relations {
+    flex-direction: column-reverse;
+
+    &__image {
+      width: 100%;
+    }
+
+    &__content {
+      width: 100%;
+      padding: $content-padding-mobile
+    }
+  }
+}

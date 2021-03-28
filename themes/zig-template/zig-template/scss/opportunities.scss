@@ -1,0 +1,189 @@
+.opportunities {
+  .banner {
+    padding-bottom: 460px;
+  }
+
+  .video {
+    position: absolute;
+    height: 720px;
+    width: 1280px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $blue;
+
+    .wp-block-embed {
+      width: 100%;
+      height: 100%;
+
+      &__wrapper {
+        width: 100%;
+        height: 100%;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .cards {
+    background-color: $grey;
+    padding-bottom: 200px;
+    padding-top: 460px;
+
+    .card {
+      @include flex();
+      margin-top: 120px;
+      position: relative;
+
+      .column {
+        width: 50%;
+        position: relative;
+        height: 425px;
+
+        &:nth-child(1) {
+          top: -20px;
+        }
+
+        &:nth-child(2) {
+          top: +20px;
+        }
+      }
+
+      .content {
+        background-color: $white;
+        padding: 50px;
+        @include flex(start, space-between, column);
+
+        .title {
+          font-size: 48px;
+          color: $blue;
+          font-weight: bold;
+        }
+
+        .text {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      .img {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.joinBg {
+  height: 750px;
+  background-image: url('/wp-content/themes/zig-template/assets/Group 162.jpg');
+  color: $white;
+  @include flex(center, center, column);
+
+  .title {
+    text-align: center;
+    max-width: 960px;
+    font-size: 48px;
+    line-height: 64px;
+    padding-bottom: 50px;
+  }
+}
+
+@include respond-to($xxl) {
+  .opportunities {
+    .banner {
+      padding-bottom: 360px;
+    }
+
+    .cards {
+      padding-top: 360px;
+    }
+
+    .video {
+      height: 567px;
+      width: 1024px;
+    }
+  }
+}
+
+@include respond-to($large) {
+  .opportunities {
+    .video {
+      top: 75%;
+      height: 506px;
+      width: 900px;
+    }
+
+    .cards {
+      .card {
+        .content {
+          .title {
+            font-size: 32px;
+          }
+          .text{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include respond-to($small) {
+  .opportunities {
+    .banner{
+      padding-bottom: 50px;
+    }
+    .video {
+      top: 0;
+      height: 300px;
+      width: 100%;
+      position: relative;
+    }
+
+    .cards {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .card {
+        margin-top: 20px;
+        flex-direction: column;
+        .content {
+          padding: 25px;
+          height: 350px;
+          top: 0;
+          width: 100%;
+          &:nth-child(1) {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: 0px;
+          }
+          .title {
+            font-size: 32px;
+          }
+          .text{
+            font-size: 16px;
+          }
+        }
+        .img{
+          display: none;
+        }
+      }
+    }
+  }
+  .joinBg{
+    max-height: 350px;
+    .title{
+      font-size: 24px;
+
+    }
+  }
+}

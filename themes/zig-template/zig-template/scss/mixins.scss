@@ -1,0 +1,14 @@
+@mixin flex($align-items: start, $justify-content: flex-start, $flex-direction: row) {
+  display: flex;
+  display: -webkit-flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+
+}
+
+@mixin respond-to($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}

@@ -1,0 +1,240 @@
+.about {
+  .banner {
+    padding-bottom: 160px;
+
+    &__title {
+      @include flex(start, start, column);
+
+      button {
+        margin-top: 217px;
+        text-decoration: none;
+      }
+    }
+
+    &__text {
+      padding: 40px 20px 40px 80px;
+      font-size: 20px;
+      position: relative;
+
+      &:before {
+        content: url("/wp-content/themes/zig-template/assets/border-lb.svg");
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      &:after {
+        content: url("/wp-content/themes/zig-template/assets/border-rt.svg");
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+
+    .button {
+      position: absolute;
+    }
+  }
+
+  .important {
+    position: relative;
+    background-color: $blue;
+    color: $white;
+    padding-top: 127px;
+    padding-bottom: 127px;
+
+    .title {
+      font-size: 36px;
+      padding-bottom: 86px;
+    }
+
+    .content {
+      @include flex();
+
+      .img {
+        width: 50%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        width: 50%;
+        padding: 0 $content-padding-desktop 0 100px;
+
+        .title {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 26px;
+          padding-bottom: 5px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .documents {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .title {
+      font-size: 36px;
+      font-weight: 500;
+      padding-bottom: 50px;
+      position: relative;
+    }
+
+
+    .button-wrapper {
+      @include flex();
+
+      .button {
+        font-size: 18px;
+        height: 88px;
+        width: 322px;
+        @include flex(center, space-evenly)
+      }
+    }
+  }
+
+  .board {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    background-color: $grey;
+
+    .title {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 36px;
+    }
+
+    .images {
+      display: flex;
+    }
+  }
+
+  .society {
+    padding-top: 122px;
+    padding-bottom: 100px;
+    background-color: $grenade;
+
+    .title {
+      color: $white;
+      font-size: 36px;
+      line-height: 48px;
+      width: 430px;
+    }
+  }
+
+  .padding-left {
+    padding-bottom: 100px;
+
+    .button {
+      margin-top: 50px;
+    }
+  }
+
+  .partners {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .title {
+      font-size: 36px;
+    }
+  }
+}
+
+@include respond-to($xxl) {
+  .about {
+    .important {
+      .content {
+        .text {
+          padding: 0 $content-padding-tablet 0 100px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($xl) {
+  .about {
+    .slogan {
+      &__title {
+        font-size: 32px;
+      }
+
+      &__text {
+        font-size: 20px;
+      }
+    }
+
+    .important {
+      .content {
+        .text {
+          padding: 0 $content-padding-tablet 0 25px;
+
+          .title {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($small) {
+  .about {
+    .slogan {
+      &__title {
+        font-size: 24px;
+      }
+
+      &__text {
+        font-size: 18px;
+      }
+    }
+
+    .important {
+      .content {
+        flex-direction: column;
+
+        .img {
+          width: 100%;
+        }
+
+        .text {
+          padding: 0 $content-padding-mobile 0 25px;
+
+          width: 100%;
+        }
+      }
+    }
+
+    .documents {
+      .button-wrapper {
+        flex-direction: column;
+
+        .button {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .society {
+      .title {
+        width: 100%;
+      }
+    }
+  }
+}

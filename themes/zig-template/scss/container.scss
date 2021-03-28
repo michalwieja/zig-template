@@ -1,0 +1,15 @@
+.container {
+  padding: 0 $content-padding-desktop;
+}
+
+@include respond-to($xxl) {
+  .container {
+    padding: 0 $content-padding-tablet;
+  }
+}
+
+@include respond-to($small) {
+  .container {
+    padding: 0 $content-padding-mobile;
+  }
+}

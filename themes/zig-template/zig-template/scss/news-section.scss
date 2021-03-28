@@ -1,0 +1,74 @@
+.news {
+  background-color: $grey;
+  padding-top: 200px;
+
+  &__title {
+    width: 45%;
+    padding-bottom: 50px;
+  }
+
+}
+
+
+@include respond-to($large) {
+  .news {
+    padding-top: 300px;
+
+    &__title {
+      width: 90%;
+    }
+  }
+}
+
+@include respond-to($small) {
+  .news {
+    padding-top: 50px;
+
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+
+.post-carousel {
+
+  .title {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 500;
+    padding-bottom: 50px;
+  }
+
+  .psac-post-carousel-content {
+    min-height: 460px;
+    background-color: $white;
+    border: none;
+  }
+
+  .psac-post-margin-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .psac-post-title {
+    position: relative;
+    min-height: 60px;
+    order: 2;
+  }
+
+  .psac-post-meta {
+    position: relative;
+    order: 1;
+  }
+
+  .psac-post-content {
+    order: 3;
+  }
+
+  .psac-post-short-content {
+    display: none;
+
+  }
+}
