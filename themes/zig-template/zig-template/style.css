@@ -507,6 +507,11 @@ html {
   margin-left: 10px;
 }
 
+@media only screen and (max-width: 800px) {
+  .read-more {
+    font-size: 14px !important;
+  }
+}
 .news {
   background-color: #eeeeee;
   padding-top: 200px;

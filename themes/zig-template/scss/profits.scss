@@ -36,15 +36,13 @@
 
   &__card {
     background-color: $white;
-    padding: 50px;
+    padding: 60px 37px 84px 44px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 350px;
     height: 390px;
     position: relative;
-    border-left: 10px solid $grenade;
-    border-bottom: 10px solid $grenade;
 
     &::before {
       content: '';
@@ -114,7 +112,7 @@
 
 @include respond-to($xxl) {
   #profits {
-    background-position: -300px 0;
+    background-position: -225px 0;
   }
   .profits {
     padding-top: 50px;
@@ -137,17 +135,20 @@
 
 @include respond-to($xl) {
   .profits {
+    padding-top: 130px;
+
     &__cards {
+      padding-top: 100px;
       grid-gap: 15px;
     }
 
     &__card {
-      padding: 15px;
-      width: 275px;
-      height: 307px;
+      padding: 40px 35px;
+      width: 335px;
+      height: 370px;
 
       .title {
-        font-size: 26px;
+        font-size: 32px;
       }
     }
   }
@@ -159,19 +160,34 @@
         width: 100%;
       }
     }
+
+    &__content {
+      padding-top: 180px;
+      padding-bottom: 100px;
+    }
   }
 }
 
 @include respond-to($large) {
   .profits {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     &__cards {
       grid-gap: 10px;
     }
 
     &__card {
-      padding: 10px;
-      width: 225px;
-      height: 251px;
+      padding: 15px;
+      width: 260px;
+      height: 290px;
+
+      &::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+      }
 
       .title {
         font-size: 18px;
@@ -181,6 +197,16 @@
         min-height: 150px;
         font-size: 14px;
       }
+    }
+  }
+  .relations {
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__text {
+      width: auto;
     }
   }
 }
@@ -214,12 +240,14 @@
 
 @include respond-to($small) {
   .profits {
+    padding-top: 70px;
 
     &__title {
-      text-align: left;
+      display: none
     }
 
     &__cards {
+      padding-top: 0;
       grid-template-columns:  1fr;
       grid-gap: 60px;
       place-items: center;
@@ -245,13 +273,25 @@
   .relations {
     flex-direction: column-reverse;
 
+    &__title{
+      padding-bottom: 25px;
+    }
+
     &__image {
       width: 100%;
     }
 
     &__content {
       width: 100%;
-      padding: $content-padding-mobile
+      padding: $content-padding-mobile;
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
     }
   }
 }

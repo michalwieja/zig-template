@@ -13,6 +13,7 @@
     .socials {
       opacity: 75%;
       padding-top: 50px;
+      padding-bottom: 50px;
 
       ul {
         li {
@@ -104,12 +105,28 @@
     height: 553px;
 
     &__content {
-      padding-top: 70px;
+      padding-top: 50px;
+    }
+
+    &__description {
+      width: 80%;
+      top: -148px;
+      height: 218px;
+      padding: 24px 40px;
+
+      & .title {
+        font-size: 20px;
+      }
+
+      & .text {
+        font-size: 14px;
+        padding: 14px 90px 0 0;
+      }
     }
 
     &__text {
       font-size: 20px;
-      padding: 30px 0;
+      padding: 20px 0;
     }
   }
 }
@@ -124,6 +141,10 @@
     &__text {
       font-size: 18px;
     }
+
+    &__description {
+      width: 100%;
+    }
   }
 }
 
@@ -133,11 +154,12 @@
     width: 100vw;
     flex-direction: column;
 
+
     &__content {
       width: 100%;
       padding-left: $content-padding-mobile;
       padding-top: 50px;
-      padding-bottom: 50px;
+      padding-bottom: 0;
     }
 
     &__text {
@@ -146,19 +168,40 @@
       width: 100%;
     }
 
+    & .socials {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      .social-icon {
+        font-size: 16px !important;
+        padding: 6px !important;
+      }
+    }
+
     &__image {
       width: 100%;
-      height: auto;
+      height: 220px;
 
       .post {
-        height: auto;
+        height: 100%;
       }
     }
 
     &__description {
       top: 0;
+      height: 260px;
       width: 100%;
-      padding: 30px $content-padding-mobile;
+      padding: 10px $content-padding-mobile;
+
+      .title {
+        font-size: 18px;
+      }
+
+      .text {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 13px;
+      }
     }
   }
 }

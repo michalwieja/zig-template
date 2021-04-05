@@ -19,15 +19,15 @@
       &:before {
         content: url("/wp-content/themes/zig-template/assets/border-lb.svg");
         position: absolute;
-        left: 0;
-        bottom: 0;
+        left: 23px;
+        bottom: -33px;
       }
 
       &:after {
         content: url("/wp-content/themes/zig-template/assets/border-rt.svg");
         position: absolute;
-        right: 0;
-        top: 0;
+        right: -21px;
+        top: -26px;
       }
 
     }

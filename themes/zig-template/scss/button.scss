@@ -12,8 +12,9 @@
   font-family: $font-family;
   transition: .3s;
   cursor: pointer;
+  text-align: center;
 
-  &.white{
+  &.white {
     border: 1px solid $white;
     color: $white;
   }
@@ -29,34 +30,43 @@
 
     }
   }
+
   &.blue {
     border: 1px solid $blue;
     color: $blue;
 
   }
-  &.grenade{
+
+  &.grenade {
     border: 1px solid $grenade;
     color: $grenade;
   }
 }
 
-@include respond-to($xl){
-  .button{
-    min-width: 180px;
+@include respond-to($xl) {
+  .button {
     min-height: 40px;
   }
 }
-@include respond-to($large){
-  .button{
+
+@include respond-to($large) {
+  .button {
     min-width: 140px;
     min-height: 32px;
   }
 }
 
-@include respond-to($medium){
-  .button{
+@include respond-to($medium) {
+  .button {
     font-size: 14px;
     margin-right: 15px;
+  }
+}
+
+@include respond-to($small) {
+  .button {
+    min-width: 118px;
+    padding: 7px 20px;
   }
 }
 
