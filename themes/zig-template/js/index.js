@@ -12,19 +12,6 @@ const handleHamburgerClick = () => {
 
 //end menu
 
-//opacity on last post
-setInterval(() => {
-  const res = document.querySelectorAll('.owl-item.active');
-  if (!res[3].classList.contains('semiopaque') || res[2].classList.contains('semiopaque')) {
-    res.forEach(el => {
-      el.classList.remove('semiopaque');
-    });
-    res[3].classList.add('semiopaque');
-  }
-}, 100);
-
-//end opacity on last post
-
 //carousel arrows
 
 const removeDefaultArrows = () => {
