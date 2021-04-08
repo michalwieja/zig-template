@@ -157,7 +157,6 @@ html {
   text-decoration: none;
   margin-right: 40px;
   color: #343434;
-  text-decoration: none;
   font-size: 16px;
   font-family: "roboto";
 }
@@ -1614,6 +1613,128 @@ html {
   font-weight: 500;
   line-height: 48px;
   padding-bottom: 56px;
+}
+
+.join-us {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.join-us .progress-bar {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  transition: all 0.25s ease-in-out;
+  margin-bottom: 59px;
+}
+.join-us .progress-bar * {
+  transition: all 0.25s ease-in-out;
+}
+.join-us .progress-bar__element {
+  height: 167px;
+  width: 256px;
+  border-top: 2px solid #c4c4c4;
+  position: relative;
+}
+.join-us .progress-bar__element p {
+  color: #c4c4c4;
+  margin-top: 61px;
+  height: 93px;
+  max-width: 164px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  padding-left: 15px;
+}
+.join-us .progress-bar__element.active {
+  border-top: 2px solid #0028c8;
+}
+.join-us .progress-bar__element.active p {
+  color: #0028c8;
+}
+.join-us .progress-bar__element.active:before {
+  content: "";
+  background-color: #fff;
+  border: 2px solid #0028c8;
+}
+.join-us .progress-bar__element.active:after {
+  background-color: #0028c8;
+}
+.join-us .progress-bar__element.past {
+  border-top: 2px solid #0028c8;
+}
+.join-us .progress-bar__element.past p {
+  color: rgba(0, 40, 200, 0.5);
+}
+.join-us .progress-bar__element.past:before {
+  content: url(/wp-content/uploads/2021/04/tick.svg);
+  background-color: #0028c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0028c8;
+}
+.join-us .progress-bar__element.past:after {
+  content: none;
+}
+.join-us .progress-bar__element:before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  background-color: #fff;
+  border: 2px solid #c4c4c4;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 30px;
+  transition: all 0.25s ease-in-out;
+}
+.join-us .progress-bar__element:after {
+  content: "";
+  transition: all 0.25s ease-in-out;
+  top: -6px;
+  left: 10px;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-color: white;
+  border-radius: 14px;
+}
+.join-us .button-wrapper {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.um-form form {
+  width: 1000px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row;
+}
+
+.um-row {
+  min-width: 1000px;
+  width: 1000px;
+  height: 600px;
+  transition: all 0.25s ease-in-out;
+}
+
+.um-field-membership_level .um-field-area {
+  display: flex;
+  flex-flow: column;
 }
 
 .semiopaque {

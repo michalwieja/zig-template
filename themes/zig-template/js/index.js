@@ -1,14 +1,15 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.header__nav');
 
-hamburger.addEventListener('click', ()=>handleHamburgerClick())
+hamburger.addEventListener('click', () => handleHamburgerClick());
 
 const handleHamburgerClick = () => {
-  hamburger.classList.toggle('active')
-  nav.classList.toggle('active')
-}
+  hamburger.classList.toggle('active');
+  nav.classList.toggle('active');
+};
 
 setInterval(() => {
+  if (window.location.pathname !== '/') return;
   const res = document.querySelectorAll('.owl-item.active');
   if (!res[3].classList.contains('semiopaque') || res[2].classList.contains('semiopaque')) {
     res.forEach(el => {

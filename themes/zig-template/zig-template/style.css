@@ -333,7 +333,7 @@ html {
   display: block;
 }
 .hero__description {
-  background-color: #000046;
+  background-color: red;
   color: #ffffff;
   width: 70%;
   position: relative;

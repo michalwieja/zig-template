@@ -1,5 +1,74 @@
 <?php get_header(); ?>
 
+<!---->
+<!--<div class="join-us">-->
+<!--  <div class="progress-bar">-->
+<!--    <div class="progress-bar__element active">-->
+<!--      <p>01<br>PRZECZYTAJ STATUS&nbsp;ZIG</p>-->
+<!--    </div>-->
+<!--    <div class="progress-bar__element">-->
+<!--      <p>02<br>WYBIERZ WŁAŚCIWĄ SKŁADKĘ</p>-->
+<!--    </div>-->
+<!--    <div class="progress-bar__element">-->
+<!--      <p>03<br>WYPEŁNIJ&nbsp;DEKLARACJĘ</p>-->
+<!--    </div>-->
+<!--    <div class="progress-bar__element">-->
+<!--      <p>04<br>WYPEŁNIJ ANKIETĘ</p>-->
+<!--    </div>-->
+<!--    <div class="progress-bar__element">-->
+<!--      <p>05<br>APLIKUJ</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="um-form">-->
+<!--    <div class="um-row _um_row_1">1</div>-->
+<!--    <div class="um-row _um_row_2">2</div>-->
+<!--    <div class="um-row _um_row_3">3</div>-->
+<!--    <div class="um-row _um_row_4">4</div>-->
+<!--    <div class="um-row _um_row_5">5</div>-->
+<!--  </div>-->
+<!--  <div class="button-wrapper">-->
+<!--    <button class="button light-blue" id="next-button">-->
+<!--      Dalej-->
+<!--    </button>-->
+<!--    <button class="button light-blue" id="prev-button">-->
+<!--      Wstecz-->
+<!--    </button>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--const next = document.getElementById('next-button');-->
+<!--const prev = document.getElementById('prev-button');-->
+<!--const pb_el = document.querySelectorAll('.progress-bar__element');-->
+<!--const first_form = document.querySelector('._um_row_1');-->
+<!--let step = 0;-->
+<!---->
+<!--next.addEventListener('click', () => handleFormButtonClick(1));-->
+<!--prev.addEventListener('click', () => handleFormButtonClick(-1));-->
+<!---->
+<!--const handleFormButtonClick = (action) => {-->
+<!--  if (step + action < 0 || step + action > 4) return;-->
+<!--  step += action;-->
+<!--  if (step < 0 || step > 4) return;-->
+<!--  pb_el.forEach((el, index) => {-->
+<!--    if (index < step) {-->
+<!--      el.classList.remove('active');-->
+<!--      el.classList.add('past');-->
+<!--      return;-->
+<!--    }-->
+<!--    if (index === step) {-->
+<!--      el.classList.remove('past');-->
+<!--      el.classList.add('active');-->
+<!--      return;-->
+<!--    }-->
+<!--    if (index > step) {-->
+<!--      el.classList.remove('active');-->
+<!--    }-->
+<!--  });-->
+<!--  first_form.style.marginLeft = `${-(step * 1000)}px`;-->
+<!--};-->
+<!--</script>-->
+
 <section class="hero">
   <div class="hero__content">
     <div class="hero__title main-title">TU SĄ MOŻLIWOŚCI
@@ -13,45 +82,47 @@
       więcej</button>
     </div>
     <div class="socials">
-		<?php
-		dynamic_sidebar( 'hero_social' )
-		?>
+        <?php
+        dynamic_sidebar('hero_social')
+        ?>
     </div>
 
 
   </div>
   <div class="hero__image">
-	  <?php
+      <?php
 
-	  $args     = array(
-		  'posts_per_page'      => 1,
-		  'post__in'            => get_option( 'sticky_posts' ),
-		  'ignore_sticky_posts' => 1
-	  );
-	  $my_query = new WP_Query( $args );
+      $args = array(
+          'posts_per_page' => 1,
+          'post__in' => get_option('sticky_posts'),
+          'ignore_sticky_posts' => 1
+      );
+      $my_query = new WP_Query($args);
 
-	  $do_not_duplicate = array();
-	  while ( $my_query->have_posts() ) : $my_query->the_post();
-		  $do_not_duplicate[] = $post->ID; ?>
+      $do_not_duplicate = array();
+      while ($my_query->have_posts()) : $my_query->the_post();
+          $do_not_duplicate[] = $post->ID; ?>
 
-        <div id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> >
-			<?php the_post_thumbnail( 'full' ); ?>
+        <div id="post-<?php the_ID(); ?>" <?php post_class(''); ?> >
+            <?php the_post_thumbnail('full'); ?>
 
         </div>
         <div class="hero__description">
           <div class="title">
-			  <?php the_title() ?>
+              <?php the_title() ?>
           </div>
           <div class="text">
-			  <?php the_excerpt() ?>
+              <?php the_excerpt() ?>
           </div>
-          <button class="read-more light-blue"><a href="<?php the_permalink(); ?>" rel="bookmark"
-                                                  title="Permanent Link to <?php the_title_attribute(); ?>">Czytaj
+          <button class="read-more light-blue"><a
+              href="<?php the_permalink(); ?>" rel="bookmark"
+              title="Permanent Link to <?php the_title_attribute(); ?>"
+            >Czytaj
               więcej</a></button>
         </div>
 
-	  <?php endwhile; ?>
-	  <?php wp_reset_postdata(); //VERY VERY IMPORTANT?>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); //VERY VERY IMPORTANT?>
 
   </div>
 </section>
@@ -59,7 +130,7 @@
   <div class="news__title sub-title">
     Sporo się u nas dzieje. Bądź zawsze na bieżąco
   </div>
-	<?php echo do_shortcode( '[psac_post_carousel autoplay="false" design="design-2" arrows="true" dots="false" show_author="false" show_tags="false" show_comments="false" show_category="false" media_size="medium" sliderheight="230" slide_show="4" category="posty"]' ); ?>
+    <?php echo do_shortcode('[psac_post_carousel autoplay="false" design="design-2" arrows="true" dots="false" show_author="false" show_tags="false" show_comments="false" show_category="false" media_size="medium" sliderheight="230" slide_show="4" category="posty"]'); ?>
   <button class="button grenade">ZOBACZ WSZYSTKIE</button>
 </section>
 <section class="announcements container">
@@ -67,22 +138,24 @@
     Najnowsze komunikaty
   </div>
   <div class="announcements__cards">
-	  <?php query_posts( array(
-		  'category_name'  => 'komunikaty',
-		  'posts_per_page' => 4
-	  ) ); ?>
-	  <?php if ( have_posts() ) : ?>
-		  <?php while ( have_posts() ) : the_post(); ?>
+      <?php query_posts(array(
+          'category_name' => 'komunikaty',
+          'posts_per_page' => 4
+      )); ?>
+      <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
           <div class="announcements__card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="title"><a href="<?php the_permalink(); ?>" rel="bookmark"
-                                  title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            <div class="title"><a
+                href="<?php the_permalink(); ?>" rel="bookmark"
+                title="Permanent Link to <?php the_title_attribute(); ?>"
+              ><?php the_title(); ?></a>
             </div>
             <div class="read-more">Czytaj więcej</div>
             <!--end entry-->
           </div><!--end post-->
-		  <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
-	  <?php else : ?>
-	  <?php endif; ?>
+          <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
+      <?php else : ?>
+      <?php endif; ?>
 
   </div>
 </section>
@@ -181,13 +254,13 @@
   </div>
 </section>
 <section class="full-width-carousel">
-	<?php echo do_shortcode( '[psac_post_carousel autoplay="false" design="design-2" show_date="false" show_author="false" show_tags="false" show_comments="false" show_category="false" sliderheight="750" slide_show="1" dots="false" category="posty"]' ); ?>
+    <?php echo do_shortcode('[psac_post_carousel autoplay="false" design="design-2" show_date="false" show_author="false" show_tags="false" show_comments="false" show_category="false" sliderheight="750" slide_show="1" dots="false" category="posty"]'); ?>
 
 </section>
 <section class="newsletter">
-	<?php
-	dynamic_sidebar( 'newsletter' )
-	?>
+    <?php
+    dynamic_sidebar('newsletter')
+    ?>
 
 </section>
 
