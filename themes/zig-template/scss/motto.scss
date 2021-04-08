@@ -18,10 +18,18 @@
   }
 }
 
+@include respond-to($xl){
+  .motto{
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+}
+
 @include respond-to($large) {
   .motto {
     &__title {
-      font-size: 48px;
+      font-size: 40px;
+      line-height: 60px;
     }
 
     &__subtitle {
@@ -37,6 +45,7 @@
 
     &__title {
       font-size: 20px;
+      line-height: 32px;
     }
 
     &__subtitle {

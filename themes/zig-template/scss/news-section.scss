@@ -4,28 +4,35 @@
 
   &__title {
     width: 35%;
-    padding-bottom: 85px;
+    padding-bottom: 50px;
   }
 
   button{
     margin-top: 60px;
     width: 240px;
   }
+
+}
+@include respond-to($xl){
+  .news{
+    padding-top: 100px;
+  }
 }
 
 @include respond-to($large) {
   .news {
-    padding-top: 300px;
+    padding-top: 150px;
 
     &__title {
       width: 90%;
     }
   }
-}
+ }
 
 @include respond-to($small) {
   .news {
-    padding-top: 50px;
+    padding-top: 280px;
+    padding-right: 30px;
 
     .button {
       width: 100%;

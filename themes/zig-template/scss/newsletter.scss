@@ -5,6 +5,8 @@
   color: $light-blue;
   line-height: 47px;
   border-bottom: 1px solid $light-blue;
+  position: relative;
+  z-index: 3;
 
   div {
     width: auto;

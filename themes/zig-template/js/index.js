@@ -1,3 +1,5 @@
+//menu
+
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.header__nav');
 
@@ -8,6 +10,9 @@ const handleHamburgerClick = () => {
   nav.classList.toggle('active');
 };
 
+//end menu
+
+// carousel - last element opacity
 setInterval(() => {
   if (window.location.pathname !== '/') return;
   const res = document.querySelectorAll('.owl-item.active');
@@ -18,3 +23,15 @@ setInterval(() => {
     res[3].classList.add('semiopaque');
   }
 }, 100);
+
+//carousel arrows
+const removeDefaultArrows = () => {
+  const rightArrows = document.querySelectorAll('.owl-nav .owl-next span');
+  rightArrows.forEach(arrow => arrow.remove())
+  const leftArrows = document.querySelectorAll('.owl-nav .owl-prev span');
+  leftArrows.forEach(arrow => arrow.remove())
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  removeDefaultArrows();
+});

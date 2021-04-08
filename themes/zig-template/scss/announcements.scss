@@ -64,13 +64,54 @@
   }
 }
 
-@include respond-to($small) {
+@include respond-to($xl) {
+  .announcements {
+    padding-bottom: 120px;
+
+    &__cards {
+      padding-top: 36px;
+    }
+
+    &__card {
+      .title {
+        width: 95%;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($large) {
   .announcements {
     padding-top: 50px;
+  }
+}
+
+
+@include respond-to($small) {
+  .announcements {
+    padding-bottom: 50px;
 
     &__cards {
       grid-template-columns: 1fr;
       padding-top: 50px;
+
+    }
+
+    &__card {
+      width: 100%;
+      padding: 10px;
+
+      .title a {
+        font-size: 14px;
+      }
+
+      .read-more {
+        font-size: 14px;
+      }
     }
   }
 }

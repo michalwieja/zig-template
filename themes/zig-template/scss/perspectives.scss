@@ -1,4 +1,7 @@
 .perspectives {
+  .banner{
+    padding-bottom: 50px;
+  }
   .cards {
     padding-bottom: 100px;
     @include flex(center, space-between);
@@ -49,13 +52,13 @@
       transition: .3s;
       cursor: pointer;
     }
-
   }
 
   .alm-reveal {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 32px;
+    margin-bottom: 32px;
 
     .alm-item {
       background-color: $white;

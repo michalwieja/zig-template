@@ -1,6 +1,12 @@
 <?php
 get_header();
-the_content();
+
+
+if ( is_page( 'dolacz' ) ) {
+	include 'join.php';
+} else {
+	the_content();
+}
 ?>
 
 <section class="newsletter">
@@ -10,8 +16,11 @@ the_content();
 
 </section>
 
+
+
 <?php
 get_footer();
 
 ?>
+
 
