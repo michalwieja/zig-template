@@ -1,0 +1,145 @@
+.contact {
+  @include flex(flex-start, space-between);
+  padding: 80px 0;
+  position: relative;
+
+  .column {
+    .banner__text {
+      width: 75%;
+      padding: 80px 0;
+    }
+  }
+
+  .data {
+    background-color: $blue;
+    color: white;
+    right: 0;
+    position: relative;
+    width: 540px;
+    height: 500px;
+    @include flex();
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 60px;
+
+    .row {
+      @include flex(center);
+      text-decoration: none;
+      width: 100%;
+      height: 33%;
+
+      &:nth-child(2) {
+        border-top: 1px solid $light-blue;
+        border-bottom: 1px solid $light-blue
+      }
+    }
+
+    .text {
+      padding-left: 60px;
+      color: white;
+      width: 100%;
+
+    }
+
+  }
+
+  input, textarea {
+    padding: 22px;
+    border: 1px solid #c4c4c4;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: $font-family;
+  }
+
+  input {
+    width: 405px;
+  }
+
+  .your-name {
+    margin-right: 32px;
+  }
+
+  textarea {
+    margin: 32px 0;
+    width: 842px;
+  }
+
+  input[type="submit"] {
+    background: transparent;
+    text-transform: uppercase;
+    border: 1px solid $black;
+    color: $black;
+    max-width: 200px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+  }
+}
+
+@include respond-to($xl) {
+  .contact {
+    .data {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($medium) {
+  .contact {
+    padding: 0 133px;
+
+    .column {
+      .banner__text {
+        width: 100%;
+      }
+    }
+
+
+    input {
+      width: 300px;
+    }
+
+    .your-name {
+      margin-right: 32px;
+    }
+
+    textarea {
+      margin: 32px 0;
+      width: 632px;
+    }
+
+    input[type="submit"] {
+      background: transparent;
+      text-transform: uppercase;
+      border: 1px solid $black;
+      color: $black;
+      max-width: 200px;
+      height: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include respond-to($small) {
+  .contact {
+    padding: 50px 30px;
+
+    .column {
+      width: 100%;
+
+      input, textarea {
+        width: 100%;
+        margin-top: 32px;
+
+      }
+
+      .banner__text {
+        padding: 50px 0 18px 0;
+      }
+    }
+  }
+}
