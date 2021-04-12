@@ -1776,7 +1776,7 @@ html {
   justify-content: center;
   flex-flow: row;
   transition: all 0.25s ease-in-out;
-  margin-bottom: 59px;
+  margin-bottom: 78px;
 }
 .join-us .progress-bar * {
   transition: all 0.25s ease-in-out;
@@ -1861,11 +1861,10 @@ html {
   width: 100%;
   max-width: 1280px;
   text-transform: uppercase;
-  margin: 200px 0;
+  margin: 78px 0;
 }
 
 #join-form {
-  margin-top: 78px;
   width: 1000px;
   max-height: 600px;
   overflow-x: hidden;
@@ -1919,6 +1918,12 @@ html {
 }
 .radio-button.active:before {
   background-color: #0028c8;
+}
+.radio-button.error {
+  border: 3px solid #EB5757;
+}
+.radio-button.error:before {
+  background-color: #EB5757;
 }
 
 .regulations {
@@ -1974,6 +1979,9 @@ html {
   padding-left: 40px;
   line-height: 72px;
 }
+.contributions__row.error .radio-button {
+  border-color: #EB5757;
+}
 .contributions__content {
   display: flex;
   align-items: flex-start;
@@ -1987,9 +1995,13 @@ html {
   width: 405px;
   border: 1px solid #c4c4c4;
   position: relative;
+  margin-bottom: 15px;
 }
 .text-input__wrapper * {
   transition: all 0.25s ease-in-out;
+}
+.text-input__wrapper.error {
+  border: 1px solid #EB5757 !important;
 }
 .text-input__wrapper.focus {
   border: 2px solid #85D4FF;
@@ -2007,6 +2019,7 @@ html {
   transform: translateY(-50%);
   background-color: #fff;
   padding: 0 5px;
+  pointer-events: none;
 }
 .text-input__input {
   border: none;
@@ -2014,6 +2027,68 @@ html {
   height: 100%;
   padding-left: 28px;
   outline: none !important;
+}
+.text-input__error {
+  position: absolute;
+  top: 60px;
+  height: 25px;
+  color: #EB5757;
+}
+
+.disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed;
+}
+
+.join-us-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-us-modal__content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  padding: 170px 55px;
+  color: black;
+}
+.join-us-modal__title {
+  font-size: 24px;
+  margin-bottom: 36px;
+}
+.join-us-modal__text {
+  font-size: 16px;
+  margin-bottom: 54px;
+}
+
+html.modal-open {
+  overflow: hidden;
+}
+html.modal-open .join-us-modal {
+  opacity: 1;
+  z-index: 9999;
+}
+
+.um-254 {
+  opacity: 0 !important;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .semiopaque {

@@ -13,7 +13,7 @@
     justify-content: center;
     flex-flow: row;
     transition: all .25s ease-in-out;
-    margin-bottom: 59px;
+    margin-bottom: 78px;
 
     * {
       transition: all .25s ease-in-out;
@@ -113,12 +113,11 @@
     width: 100%;
     max-width: 1280px;
     text-transform: uppercase;
-    margin: 200px 0;
+    margin: 78px 0;
   }
 }
 
 #join-form {
-  margin-top: 78px;
   width: 1000px;
   max-height: 600px;
   overflow-x: hidden;
@@ -178,6 +177,14 @@
 
     &:before {
       background-color: $blue;
+    }
+  }
+
+  &.error {
+    border: 3px solid $red;
+
+    &:before {
+      background-color: $red;
     }
   }
 }
@@ -245,6 +252,12 @@
       padding-left: 40px;
       line-height: 72px;
     }
+
+    &.error {
+      .radio-button {
+        border-color: $red;
+      }
+    }
   }
 
   &__content {
@@ -262,9 +275,14 @@
     width: 405px;
     border: 1px solid #c4c4c4;
     position: relative;
+    margin-bottom: 15px;
 
     * {
       transition: all .25s ease-in-out;
+    }
+
+    &.error {
+      border: 1px solid $red !important;
     }
 
     &.focus {
@@ -278,6 +296,7 @@
         top: 0;
       }
     }
+
   }
 
   &__label {
@@ -287,6 +306,7 @@
     transform: translateY(-50%);
     background-color: #fff;
     padding: 0 5px;
+    pointer-events: none;
   }
 
   &__input {
@@ -294,8 +314,73 @@
     width: 100%;
     height: 100%;
     padding-left: 28px;
-
-
     outline: none !important;
   }
+
+  &__error {
+    position: absolute;
+    top: 60px;
+    height: 25px;
+    color: $red;
+  }
+}
+
+.disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed;
+}
+
+.join-us-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  opacity: 0;
+  transition: all .35s ease-in-out;
+  background-color: rgba(#000, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    background-color: $white;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 170px 55px;
+    color: black;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 54px;
+  }
+}
+
+html.modal-open {
+  overflow: hidden;
+
+  .join-us-modal {
+    opacity: 1;
+    z-index: 9999;
+  }
+}
+
+.um-254 {
+  opacity: 0 !important;
+  max-height: 0;
+  overflow: hidden;
 }

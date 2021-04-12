@@ -152,29 +152,52 @@
       </div>
     </div>
     <div class="step">
-      <div class="text-input__wrapper">
+      <div class="text-input__wrapper" id="name-input">
         <p class="text-input__label">Imię</p>
-        <input type="text" class="text-input__input">
+        <input type="text" class="text-input__input" name="name">
+        <p class="text-input__error" id="name-error"></p>
       </div>
-      <div class="text-input__wrapper">
+      <div class="text-input__wrapper" id="email-input">
         <p class="text-input__label">Email</p>
-        <input type="email" class="text-input__input" autocomplete="new-password">
+        <input type="email" class="text-input__input" autocomplete="new-password" name="email">
+        <p class="text-input__error" id="email-error"></p>
       </div>
-      <div class="text-input__wrapper">
+      <div class="text-input__wrapper" id="password-input">
         <p class="text-input__label">Hasło</p>
-        <input type="password" class="text-input__input" autocomplete="new-password">
+        <input type="password" class="text-input__input" autocomplete="new-password" name="password">
+        <p class="text-input__error" id="password-error"></p>
       </div>
     </div>
   </form>
   <div class="button-wrapper">
-    <button class="button light-blue" id="prev-button" style="opacity: 0">
+    <button class="button" id="prev-button" style="opacity: 0">
       Wróć do poprzedniego kroku
     </button>
-    <button class="button light-blue" id="next-button">
+    <button class="button" id="next-button">
       Akceptuję i przechodzę dalej
     </button>
   </div>
+    <?php echo do_shortcode("[ultimatemember form_id=\"254\"]"); ?>
+  <div class="join-us-modal">
+    <div class="join-us-modal__content">
+      <p class="join-us-modal__title">
+        Dzień dobry,
+        dziękujemy za wypełnienie deklaracji.
+      </p>
+      <p class="join-us-modal__text">
+        Daj nam chwilę na zapoznanie się z nią. Skontaktujemy się najszybciej, jak będzie to  możliwe. W pilnych sprawach skontaktuj się z Pauliną...., tel..
+        <br>
+        <br>
+        Dziękujemy,
+        Z poważaniem
+      </p>
+      <button class="button" id="close-modal-button">
+        Kolejny krok
+      </button>
+    </div>
+  </div>
 </div>
 
+<script type="text/javascript" src="/wp-content/themes/zig-template/js/validator.js"></script>
 <script type="text/javascript" src="/wp-content/themes/zig-template/js/join.js"></script>
 
