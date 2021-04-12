@@ -528,6 +528,10 @@ html {
   cursor: pointer;
   text-align: center;
 }
+.button:hover {
+  color: white;
+  background-color: #343434;
+}
 .button.white {
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -548,6 +552,11 @@ html {
 .button.grenade {
   border: 1px solid #000046;
   color: #000046;
+}
+.button.grenade:hover {
+  border: 1px solid #000046;
+  color: white;
+  background-color: #000046;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -1218,8 +1227,8 @@ html {
   cursor: pointer;
 }
 .newsletter form .tnp-field-button input:hover, .newsletter form .tnp-field-email input:hover {
-  color: #85d4ff;
-  border: 1px solid #85d4ff;
+  color: white;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1152px) {
@@ -1810,7 +1819,7 @@ html {
   right: 240px !important;
 }
 .post-carousel .psac-post-carousel-content {
-  height: 460px;
+  height: 500px;
   background-color: #ffffff;
   border: none;
 }
@@ -1822,7 +1831,7 @@ html {
 }
 .post-carousel .psac-post-carousel-content .psac-post-title {
   position: relative;
-  min-height: 70px;
+  min-height: 97px;
   order: 2;
 }
 .post-carousel .psac-post-carousel-content .psac-post-title a {

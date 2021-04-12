@@ -14,6 +14,12 @@
   cursor: pointer;
   text-align: center;
 
+  &:hover {
+    color: white;
+    background-color: $black;
+  }
+
+
   &.white {
     border: 1px solid $white;
     color: $white;
@@ -40,6 +46,12 @@
   &.grenade {
     border: 1px solid $grenade;
     color: $grenade;
+
+    &:hover {
+      border: 1px solid $grenade;
+      color: white;
+      background-color: $grenade;
+    }
   }
 }
 
