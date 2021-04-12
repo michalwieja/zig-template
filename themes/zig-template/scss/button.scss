@@ -23,6 +23,11 @@
   &.white {
     border: 1px solid $white;
     color: $white;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
   }
 
   &.light-blue {
@@ -33,7 +38,6 @@
       color: $blue;
       border: 1px solid $white;
       background-color: $white;
-
     }
   }
 
@@ -41,6 +45,10 @@
     border: 1px solid $blue;
     color: $blue;
 
+    &:hover {
+      color: white;
+      background-color: $blue;
+    }
   }
 
   &.grenade {
