@@ -2,15 +2,16 @@
   opacity: 0.3;
 }
 
-.psac-post-carousel-wrp {
-  width: 1720px !important;
-}
 
 .carousel {
   position: relative;
 }
 
 .post-carousel {
+  .psac-post-carousel-wrp {
+    width: 1720px !important;
+  }
+
   .owl-prev {
     display: none !important;
   }
@@ -90,6 +91,15 @@
     h2 {
       font-size: 18px !important;
     }
+  }
+}
+
+@include respond-to($small) {
+  .about {
+    .padding-left {
+      padding: 0 30px 50px ;
+    }
+  ;
   }
 }
 

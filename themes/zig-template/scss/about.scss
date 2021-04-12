@@ -230,11 +230,18 @@
 
         .button {
           margin-bottom: 10px;
+          width: 100%;
+          font-size: 14px;
         }
       }
     }
 
+    .board{
+      padding: 0;
+    }
+
     .society {
+      padding: 50px 30px;
       .title {
         width: 100%;
       }

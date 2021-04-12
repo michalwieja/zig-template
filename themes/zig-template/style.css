@@ -1508,6 +1508,14 @@ html {
   }
   .about .documents .button-wrapper .button {
     margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .about .board {
+    padding: 0;
+  }
+  .about .society {
+    padding: 50px 30px;
   }
   .about .society .title {
     width: 100%;
@@ -1819,14 +1827,13 @@ html {
   opacity: 0.3;
 }
 
-.psac-post-carousel-wrp {
-  width: 1720px !important;
-}
-
 .carousel {
   position: relative;
 }
 
+.post-carousel .psac-post-carousel-wrp {
+  width: 1720px !important;
+}
 .post-carousel .owl-prev {
   display: none !important;
 }
@@ -1892,6 +1899,11 @@ html {
   font-size: 18px !important;
 }
 
+@media only screen and (max-width: 800px) {
+  .about .padding-left {
+    padding: 0 30px 50px;
+  }
+}
 .full-width-carousel {
   background-color: #0028c8;
   position: relative;
