@@ -97,10 +97,10 @@ html {
   color: #0028c8;
   font-weight: bold;
   padding-right: 50px;
-  text-underline-offset: 16px;
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-thickness: 7px;
+  text-underline-offset: 16px;
 }
 .banner__text {
   width: 50%;
@@ -114,9 +114,13 @@ html {
 @media only screen and (max-width: 1366px) {
   .banner__title {
     font-size: 32px;
+    line-height: 48px;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 12px;
   }
   .banner__text {
     font-size: 20px;
+    line-height: 30px;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -127,10 +131,13 @@ html {
   }
   .banner__title {
     font-size: 24px;
+    line-height: 32px;
     width: 100%;
+    text-underline-offset: 10px;
   }
   .banner__text {
     font-size: 18px;
+    line-height: 24px;
     width: 100%;
   }
 }
@@ -224,19 +231,42 @@ html {
     position: fixed;
     z-index: 2;
     background-color: #fff;
-    top: 0;
+    top: 80px;
     right: -100%;
-    width: 33%;
+    width: 50%;
     height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
-    padding-left: 50px;
     transition: 0.3s;
+    border-top: 1px solid #c4c4c4;
+    padding-bottom: 30vh;
+  }
+  .header__nav .menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+  .header__nav:after {
+    content: "";
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #c4c4c4;
+  }
+  .header__nav .join {
+    order: 2;
+    position: relative;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .header__nav .phone {
+    order: 3;
   }
   .header__nav.active {
     right: 0;
-    padding-top: 100px;
   }
   .header .hamburger {
     display: flex;
@@ -281,8 +311,7 @@ html {
 @media only screen and (max-width: 800px) {
   .header__nav {
     width: 100%;
-    padding-left: 0;
-    align-items: center;
+    top: 60px;
   }
   .header .hamburger__line {
     width: 20px;
@@ -2432,6 +2461,133 @@ html.modal-open .join-us-modal {
   }
   .full-width-carousel .psac-post-carousel-content .psac-post-margin-content .psac-readmorebtn::after {
     padding-left: 15px;
+  }
+}
+.contact {
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 80px 0;
+  position: relative;
+}
+.contact .column .banner__text {
+  width: 75%;
+  padding: 80px 0;
+}
+.contact .data {
+  background-color: #0028c8;
+  color: white;
+  right: 0;
+  position: relative;
+  width: 540px;
+  height: 500px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 60px;
+}
+.contact .data .row {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-decoration: none;
+  width: 100%;
+  height: 33%;
+}
+.contact .data .row:nth-child(2) {
+  border-top: 1px solid #85d4ff;
+  border-bottom: 1px solid #85d4ff;
+}
+.contact .data .text {
+  padding-left: 60px;
+  color: white;
+  width: 100%;
+}
+.contact input, .contact textarea {
+  padding: 22px;
+  border: 1px solid #c4c4c4;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: "Saira", sans-serif;
+}
+.contact input {
+  width: 405px;
+}
+.contact .your-name {
+  margin-right: 32px;
+}
+.contact textarea {
+  margin: 32px 0;
+  width: 842px;
+}
+.contact input[type=submit] {
+  background: transparent;
+  text-transform: uppercase;
+  border: 1px solid #343434;
+  color: #343434;
+  max-width: 200px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1366px) {
+  .contact .data {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact {
+    padding: 0 133px;
+  }
+  .contact .column .banner__text {
+    width: 100%;
+  }
+  .contact input {
+    width: 300px;
+  }
+  .contact .your-name {
+    margin-right: 32px;
+  }
+  .contact textarea {
+    margin: 32px 0;
+    width: 632px;
+  }
+  .contact input[type=submit] {
+    background: transparent;
+    text-transform: uppercase;
+    border: 1px solid #343434;
+    color: #343434;
+    max-width: 200px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .contact {
+    padding: 50px 30px;
+  }
+  .contact .column {
+    width: 100%;
+  }
+  .contact .column input, .contact .column textarea {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .contact .column .banner__text {
+    padding: 50px 0 18px 0;
   }
 }
 .padding-left {
