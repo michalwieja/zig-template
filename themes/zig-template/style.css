@@ -1528,7 +1528,6 @@ html {
   padding-top: 10px;
 }
 .opportunities .banner__text {
-  font-size: 24px;
   padding: 24px 0 0 22px;
   font-weight: 500;
 }
@@ -1635,6 +1634,20 @@ html {
     width: 1024px;
   }
 }
+@media only screen and (max-width: 1366px) {
+  .opportunities .cards .container {
+    padding: 0 133px;
+  }
+  .opportunities .cards .container .card .content {
+    padding: 50px;
+  }
+  .opportunities .cards .container .card .title {
+    font-size: 32px;
+  }
+  .opportunities .cards .container .card .text {
+    font-size: 16px;
+  }
+}
 @media only screen and (max-width: 1152px) {
   .opportunities .video {
     top: 75%;
@@ -1642,15 +1655,21 @@ html {
     width: 900px;
   }
   .opportunities .cards .card .content .title {
-    font-size: 32px;
+    font-size: 24px;
   }
   .opportunities .cards .card .content .text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 800px) {
   .opportunities .banner {
     padding-bottom: 50px;
+  }
+  .opportunities .banner__title {
+    padding: 0 0 25px;
+  }
+  .opportunities .banner__text {
+    padding: 0;
   }
   .opportunities .video {
     top: 0;
@@ -1659,32 +1678,34 @@ html {
     position: relative;
   }
   .opportunities .cards {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 30px;
   }
-  .opportunities .cards .card {
+  .opportunities .cards .container {
+    padding: 0;
+  }
+  .opportunities .cards .container .card {
     margin-top: 20px;
     flex-direction: column;
   }
-  .opportunities .cards .card .content {
-    padding: 25px;
+  .opportunities .cards .container .card .content {
+    padding: 15px;
     height: 350px;
     top: 0;
     width: 100%;
   }
-  .opportunities .cards .card .content:nth-child(1) {
+  .opportunities .cards .container .card .content:nth-child(1) {
     top: 0;
   }
-  .opportunities .cards .card .content:nth-child(2) {
+  .opportunities .cards .container .card .content:nth-child(2) {
     top: 0px;
   }
-  .opportunities .cards .card .content .title {
+  .opportunities .cards .container .card .content .title {
     font-size: 32px;
   }
-  .opportunities .cards .card .content .text {
+  .opportunities .cards .container .card .content .text {
     font-size: 16px;
   }
-  .opportunities .cards .card .img {
+  .opportunities .cards .container .card .img {
     display: none;
   }
 
@@ -1693,6 +1714,7 @@ html {
   }
   .joinBg .title {
     font-size: 24px;
+    line-height: 36px;
   }
 }
 .perspectives .banner {
