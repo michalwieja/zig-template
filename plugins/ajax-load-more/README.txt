@@ -1,10 +1,10 @@
 === WordPress Infinite Scroll - Ajax Load More ===
 Contributors: dcooney, connekthq
-Donate: https://connekthq.com/donate/
+Donate;WordPressInfiniteScrollAjaxLoadMoreContributorsWordPressInfiniteScrollAjaxLoadMoreContributorsWordPressInfiniteScrollAjaxLoadMoreContributorsWordPressInfiniteScrollAjaxLoadMoreContributors link: https://connekthq.com/donate/
 Tags: infinite scroll, load more, scroll, infinite, lazy load, lazy loading, endless scroll, pagination, ajax pagination, ajax, ajax posts, woocommerce, ajax load more, masonry
 Requires at least: 4.0
-Tested up to: 5.6
-Stable tag: 5.4.3
+Tested up to: 5.7
+Stable tag: 5.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,8 +32,6 @@ Ajax Load More is compatible for endless scrolling with popular eCommerce plugin
 
 Check out the **[website](https://connekthq.com/plugins/ajax-load-more/)** for more information on the features and functionality of Ajax Load More.
 
----
-
 ### What's New
 
 -  **[Elementor Add-on](https://connekthq.com/plugins/ajax-load-more/add-ons/elementor/)** - Infinite scroll Elementor Posts Widget and WooCommerce widget content with Ajax Load More.
@@ -44,8 +42,6 @@ Check out the **[website](https://connekthq.com/plugins/ajax-load-more/)** for m
 -  **[Masonry](https://connekthq.com/plugins/ajax-load-more/examples/masonry/)** - Built-in support and functionality for Masonry layouts.
 -  **[Progress Bars](https://connekthq.com/plugins/ajax-load-more/examples/progress-bar/)** - Display a Progress Bar load indicator with each Ajax request.
 -  **[Scroll Container](https://connekthq.com/plugins/ajax-load-more/examples/scroll-container/)** - Constraining infinite scroll to a parent container.
-
----
 
 ### Content Types
 
@@ -63,8 +59,6 @@ Check out the examples below:
 
 _*Add-on required_
 
----
-
 ### Parameters
 
 Ajax Load More accepts a variety of query and styling parameters that are passed to WordPress via shortcode or [PHP function](https://connekthq.com/plugins/ajax-load-more/docs/implementation-methods).
@@ -72,8 +66,6 @@ Ajax Load More accepts a variety of query and styling parameters that are passed
 These parameters allow you to customize the content of your infinite scroll by selecting query parameters such as Post Types, Taxonomies, Categories, Tags, etc… you can also control interactive properties such as button labels, scrolling options and transition styles.
 
 &rarr; [View Parameters](https://connekthq.com/plugins/ajax-load-more/docs/shortcode-parameters/)
-
----
 
 ### Shortcode Builder
 
@@ -116,8 +108,6 @@ The Ajax Load More [Shortcode Builder](https://connekthq.com/plugins/ajax-load-m
 
 [youtube https://www.youtube.com/watch?v=EQ57i6dkOew]
 
----
-
 ### Add-ons
 
 The following [add-ons](;;;https://connekthq.com/plugins/ajax-load-more/add-ons/) are available to increase the functionality of Ajax Load More.
@@ -138,8 +128,6 @@ The following [add-ons](;;;https://connekthq.com/plugins/ajax-load-more/add-ons/
 -  **[Users](;;;https://connekthq.com/plugins/ajax-load-more/add-ons/users/)**: Lazy loading WordPress Users with Ajax Load More.
 -  **[WooCommerce](;;;https://connekthq.com/plugins/ajax-load-more/add-ons/woocommerce/)**: Infinite scroll WooCommerce products with Ajax Load More.
 
----
-
 ### Extensions
 
 The following free [extensions](;;;https://connekthq.com/plugins/ajax-load-more/extensions/) are available to provide compatibility with popular WordPress plugins and core features.
@@ -156,15 +144,11 @@ Ajax Load More dispatches callbacks during various stages in the plugins lifecyc
 
 &rarr; [View All Callback Functions](https://connekthq.com/plugins/ajax-load-more/docs/callback-functions/)
 
----
-
 ### Filter Hooks
 
 Ajax Load More has a variety of WordPress [filters](https://connekthq.com/plugins/ajax-load-more/docs/filter-hooks/) in place that enable users to hook into Ajax Load More to insert or modify data.
 
 &rarr; [See All Filters](https://connekthq.com/plugins/ajax-load-more/docs/filter-hooks/)
-
----
 
 ### Variables
 
@@ -175,8 +159,6 @@ Ajax Load More passes the following PHP **[variables](https://connekthq.com/plug
 -  **$alm_item** - Returns the current item number within your loop.
 -  **$alm_found_posts** - Returns the total number of posts found within the entire WordPress query.
 
----
-
 ### Plugin Links
 
 -  [Official Website](https://connekthq.com/ajax-load-more/)
@@ -184,8 +166,6 @@ Ajax Load More passes the following PHP **[variables](https://connekthq.com/plug
 -  [Premium Add-ons](https://connekthq.com/plugins/ajax-load-more/add-ons/)
 -  [Free Extensions](https://connekthq.com/plugins/ajax-load-more/extensions/)
 -  [Github](https://github.com/dcooney/wordpress-ajax-load-more/)
-
----
 
 ### Please Review Ajax Load More!
 
@@ -279,6 +259,16 @@ How to install Ajax Load More.
 7. Shortcode and implementation examples
 
 == Changelog ==
+
+= 5.4.4 - March 31, 2021 =
+
+* FIX - Fixed issue when filtering and updating the Load More button label.
+* FIX - Fixed JS error when using `transition_container="false"` and `transition="false"` in the same shortcode.
+* FIX - Fixed 'Cannot read property postcount of undefined' error that can appear. The underlying still exists and I've been unable to solve it but the error is now surpressed and Ajax Load More will function as expected. A console warning will be rendered in it's place.
+* UPDATE - Updated core ALM button CSS selectors.
+* UPDATE - Admin UI/UX updates to Shortcode Builder and Settings screen.
+* UPDATE - Attempting to fix with license activation script to prevent issues with `wp_remote_post`.
+* UPDATE - Added console warning if Ajax Load More is not able to access meta object in Ajax response.
 
 = 5.4.3 - February 11, 2021 =
 
