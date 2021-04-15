@@ -1,7 +1,8 @@
 .perspectives {
-  .banner{
+  .banner {
     padding-bottom: 50px;
   }
+
   .cards {
     padding-bottom: 100px;
     @include flex(center, space-between);
@@ -95,8 +96,6 @@
       p:last-child {
         display: none;
       }
-
-
     }
   }
 }
@@ -129,5 +128,134 @@
       padding-bottom: 56px;
     }
   }
+}
 
+@include respond-to($xl) {
+  .perspectives {
+    .cards {
+      .card {
+        width: 330px;
+      }
+    }
+  }
+  .question {
+    background-position-x: -100px;
+  }
+}
+
+@include respond-to($large) {
+  .perspectives {
+    .cards {
+      .card {
+        width: 250px;
+
+        .number {
+          font-size: 32px;
+          line-height: 48px;
+        }
+
+        .title {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .ajax-load-more-wrap {
+    .alm-reveal {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+  .question {
+    height: 500px;
+    background-position-x: -250px;
+
+    .content {
+      padding: 150px 0;
+    }
+    .img img{
+      height: 500px;
+    }
+  }
+}
+
+@include respond-to($medium) {
+  .perspectives {
+    .cards {
+      .card {
+        text-align: center;
+        width: 200px;
+
+        .number {
+          font-size: 32px;
+          line-height: 48px;
+        }
+
+        .title {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .question {
+    height: 400px;
+    background-position-x: -300px;
+
+    .content {
+      padding: 100px 0;
+    }
+    .img img{
+      height: 400px;
+    }
+  }
+
+}
+
+@include respond-to($small) {
+  .perspectives {
+    .cards {
+      flex-wrap: wrap;
+      gap: 25px;
+      padding-bottom: 50px;
+
+      .card {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+
+  .ajax-load-more-wrap {
+    padding: 50px 0;
+
+    .alm-reveal {
+      grid-template-columns: 1fr;
+    }
+
+    .alm-btn-wrap {
+      margin-top: 18px;
+    }
+  }
+
+  .question{
+    height: auto;
+    background-image: unset;
+    .container{
+      flex-direction: column-reverse;
+    }
+    .content{
+      width: 100%;
+      padding: 50px 0;
+    }
+    .img{
+      width: 100%;
+      img{
+        height: 300px;
+        display: block;
+      }
+    }
+
+  }
 }

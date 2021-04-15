@@ -1,11 +1,13 @@
 .opportunities {
   .banner {
     padding-bottom: 460px;
-    &__title{
+
+    &__title {
       padding-top: 10px;
     }
-    &__text{
-      font-size: 24px;
+
+    &__text {
+
       padding: 24px 0 0 22px;
       font-weight: 500;
     }
@@ -40,7 +42,8 @@
     background-color: $grey;
     padding-bottom: 175px;
     padding-top: 430px;
-    .container{
+
+    .container {
       padding: 0 222px;
     }
 
@@ -123,6 +126,30 @@
   }
 }
 
+@include respond-to($xl) {
+  .opportunities {
+    .cards {
+      .container {
+        padding: 0 133px;
+
+        .card {
+          .content {
+            padding: 50px;
+          }
+
+          .title {
+            font-size: 32px;
+          }
+
+          .text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include respond-to($large) {
   .opportunities {
     .video {
@@ -135,10 +162,11 @@
       .card {
         .content {
           .title {
-            font-size: 32px;
+            font-size: 24px;
           }
-          .text{
-            font-size: 16px;
+
+          .text {
+            font-size: 14px;
           }
         }
       }
@@ -149,9 +177,19 @@
 
 @include respond-to($small) {
   .opportunities {
-    .banner{
+    .banner {
       padding-bottom: 50px;
+
+      &__title {
+        padding: 0 0 25px;
+
+      }
+
+      &__text {
+        padding: 0;
+      }
     }
+
     .video {
       top: 0;
       height: 300px;
@@ -160,41 +198,51 @@
     }
 
     .cards {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      .card {
-        margin-top: 20px;
-        flex-direction: column;
-        .content {
-          padding: 25px;
-          height: 350px;
-          top: 0;
-          width: 100%;
-          &:nth-child(1) {
+      padding: 50px 30px;
+
+      .container {
+        padding: 0;
+
+        .card {
+          margin-top: 20px;
+          flex-direction: column;
+
+          .content {
+            padding: 15px;
+            height: 350px;
             top: 0;
+            width: 100%;
+
+            &:nth-child(1) {
+              top: 0;
+            }
+
+            &:nth-child(2) {
+              top: 0px;
+            }
+
+            .title {
+              font-size: 32px;
+            }
+
+            .text {
+              font-size: 16px;
+            }
           }
 
-          &:nth-child(2) {
-            top: 0px;
+          .img {
+            display: none;
           }
-          .title {
-            font-size: 32px;
-          }
-          .text{
-            font-size: 16px;
-          }
-        }
-        .img{
-          display: none;
         }
       }
     }
   }
-  .joinBg{
+  .joinBg {
     max-height: 350px;
-    .title{
-      font-size: 24px;
 
+    .title {
+      font-size: 24px;
+      line-height: 36px;
     }
   }
 }
