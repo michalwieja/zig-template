@@ -6,6 +6,37 @@
   justify-content: center;
   flex-flow: column;
 
+  &__title {
+    background-color: #e5e5e5;
+    height: 274px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    &--wrapper {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1280px;
+      width: 100%;
+    }
+
+    &--main {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &--sub {
+      font-size: 24px;
+      color: $black;
+      line-height: 32px;
+      max-width: 410px;
+    }
+  }
+
   .progress-bar {
     max-width: 1280px;
     display: flex;
@@ -379,7 +410,26 @@ html.modal-open {
   }
 }
 
-.um-254 {
+.no-text-transform {
+  text-transform: none;
+}
+
+#form-error {
+  margin-bottom: 0;
+  font-size: 24px;
+  color: $red;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  &.visible {
+    max-height: 100%;
+    opacity: 1;
+    margin-bottom: 50px;
+  }
+}
+
+.um-291 {
   opacity: 0 !important;
   max-height: 0;
   overflow: hidden;

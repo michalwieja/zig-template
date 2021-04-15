@@ -3,6 +3,10 @@
     z-index: 3;
   }
 
+  &.inverted {
+    background-color: #E5E5E5;
+  }
+
   @include flex(center, space-between);
   padding: $site-padding-desktop;
   height: 80px;
